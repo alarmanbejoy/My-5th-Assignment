@@ -305,11 +305,11 @@
                         <h1>Total Price:</h1>
                         <h1 id="totalPriceValue">0</h1>
                     </div>
-                    <div class="max-w-md mx-auto mt-4">
+                    <div id="inputAndApply" class="max-w-md mx-auto mt-4">
                         <div id="inputAndApplySection" class="relative">
-                            <input type="text" placeholder="Input Coupon Code"
+                            <input id="inputField" type="text" placeholder="Input Coupon Code"
                                 class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-green-500">
-                            <button
+                            <button id="buttonEnter"
                                 class="absolute right-0 top-0 bg-green-500 text-white px-4 py-2 rounded-md">Apply</button>
                         </div>
                     </div>
@@ -318,128 +318,60 @@
 
 
                     <div class="border-b border-dotted mb-4 mt-4 "></div>
-                    <div class="flex justify-between gap-24">
-                        <h1>Discount Price:</h1>
-                        <h1 id="discountPriceValue">0</h1>
-                    </div>
 
-                    <div class="border-b border-dotted mb-4 mt-4 "></div>
+                    
                     <div class="flex justify-between gap-24">
                         <h1>Grand Total:</h1>
                         <h1 id="grandTotalPriceValue">0</h1>
                     </div>
-                    <div>
-                        <button id="nextbtn" class="bg-green-500 hover:bg-green-600 mt-4 text-white font-bold py-2 px-4 
-                        rounded-md w-full">
-                            Next
-                        </button>
-
-                    </div>
+                   <!-- Success Card -->
+<div id="successCard" class="hidden fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-8 h-30 w-1/3 rounded-md shadow-lg">
+    <img src="images/success.png" class="mx-auto mb-4" alt="Success Image" width="100" height="100">
+    <h1 class="text-xl font-bold text-center mb-2">Success!</h1>
+    <p class="text-center mb-4">Dear sir,Thank you for purches our Ticket.</p>
+    <button id="continueBtn" class="bg-green-500 text-white rounded-md px-4 py-2 mr-8 w-full ">Continue</button>
+  </div>
+  
+  <!-- Next Button -->
+  <div>
+    <button id="nextbtn" class="bg-green-500 hover:bg-green-600 mt-4 text-white font-bold py-2 px-4 rounded-md w-full">
+      Next
+    </button>
+  </div>
+  
+                    
+            
 
 
                 </div>
+                
 
 
             </div>
 
+
     </section>
 
+
+    <script src="index.js"></script>
+
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // Wait for the DOM content to be fully loaded
-
-            // Find the button and section elements
-            const firstBannerBtn = document.getElementById("first-banner-btn");
-            const paribahanSection = document.getElementById("p-h-paribahanSection");
-
-            // Add click event listener to the button
-            firstBannerBtn.addEventListener("click", function () {
-                // Scroll the section into view
-                paribahanSection.scrollIntoView({ behavior: "smooth", block: "start" });
-            });
-        });
-
+     
     </script>
-    <script>
+  <script>
+  
+  
+
+  </script>
 
 
-  document.addEventListener("DOMContentLoaded", function() {
-    // Wait for the DOM content to be fully loaded
 
-    // Variables to track seat counts and total price
-    let remainingSeats = 8;
-    let seatCount = 0;
-    let totalPrice = 0;
-    let clickCount = 0;
+ 
 
-    // Find all seat buttons
-    const seatButtons = document.querySelectorAll('#A1, #A2, #A3, #A4, #B1, #B2, #B3, #B4');
+       <script>
+     
+      </script>
 
-    // Function to handle seat button click
-    function handleSeatClick(event) {
-        const seatButton = event.target;
-
-        // Check if the seat is already selected
-        if (seatButton.classList.contains('bg-green-500')) {
-            alert('You have already selected this seat.');
-            return;
-        }
-
-        // Check if all available seats are already selected
-        if (seatCount >= 4) {
-            alert('You can purchase 4 tickets.');
-            return;
-        }
-
-        // Update seat button appearance
-        seatButton.classList.add('bg-green-500');
-        seatButton.classList.remove('bg-gray-100');
-        seatButton.classList.add('text-white');
-
-        // Update remaining seats count
-        remainingSeats--;
-
-        // Update seat count
-        seatCount++;
-        clickCount++;
-
-        // Update Remaining Seats display
-        document.getElementById('RemainingSeats').textContent = remainingSeats;
-
-        // Update seat count display
-        document.getElementById('seatCountIncrage').textContent = seatCount;
-
-        // Create new elements for selected seat details
-        const selectedSeatElement = document.createElement('h1');
-        const seatTypeElement = document.createElement('h1');
-        const seatPriceElement = document.createElement('h1');
-
-        // Set values for the new elements
-        selectedSeatElement.textContent = seatButton.id;
-        seatTypeElement.textContent = 'Economy';
-        seatPriceElement.textContent = '550';
-
-        // Append the new elements to the selected seat section
-        const selectedValueImport = document.getElementById(`SelectedValueImport${Math.ceil(clickCount / 1)}`);
-        selectedValueImport.appendChild(selectedSeatElement);
-        selectedValueImport.appendChild(seatTypeElement);
-        selectedValueImport.appendChild(seatPriceElement);
-
-        // Update total price
-        totalPrice += 550;
-        document.getElementById('totalPriceValue').textContent = totalPrice;
-    }
-
-    // Add click event listeners to all seat buttons
-    seatButtons.forEach(seatButton => {
-        seatButton.addEventListener('click', handleSeatClick);
-    });
-});
-
-
-    </script
-
-    </script>
 
 </body>
 
