@@ -22,7 +22,7 @@
 
     <div class="mt-6">
         <!-- Navigation Bar -->
-     <nav>
+        <nav>
             <div class="container mx-auto flex items-center justify-between">
                 <!-- Logo -->
                 <div class="text-3xl font-semibold text-green-600">P-Ticket</div>
@@ -252,7 +252,7 @@
                 </div>
 
                 <div class="flex space-x-20 mt-6 mb-4">
-                    <button  class=" w-20 h-12 rounded">B</button>
+                    <button class=" w-20 h-12 rounded">B</button>
                     <button id="B1" class="bg-gray-100 w-20 h-12 rounded">B1 </button>
                     <button id="B2" class="bg-gray-100 w-20 h-12 rounded">B2 </button>
                     <button id="B3" class="bg-gray-100 w-20 h-12 rounded">B3 </button>
@@ -280,21 +280,26 @@
                                 class="bg-green-500 text-white px-2 rounded-full">0</span></h1>
                         <h1 class="text-xl font-semibold ">Class</h1>
                         <h1 class="text-xl font-semibold ">Fare</h1>
-                       </div>
-                       <div class="border-b border-dotted mt-4 "></div>
+                    </div>
+                    <div class="border-b border-dotted mt-4 "></div>
+
+
+
                     <!-- For selected seat -->
-                    <div id="SelectedValueImport1" class=" gap-24 flex justify-between mt-2">
-                      
-                    </div>
-                    <div id="SelectedValueImport2" class=" gap-24 flex justify-between mt-2">
-                       
-                    </div>
-                    <div id="SelectedValueImport3" class=" gap-24 flex justify-between mt-2">
-                    
-                    </div>
-                    <div id="SelectedValueImport4" class=" gap-24 flex justify-between mt-2">
+                    <div class="">
+                        <div id="SelectedValueImport1" class=" gap-24 flex justify-between mt-2">
+                           </div> 
+                        <div id="SelectedValueImport2" class=" gap-24 flex justify-between mt-2">
+                         </div> 
+                        <div id="SelectedValueImport3" class=" gap-24 flex justify-between mt-2">
+                         </div> 
+                        <div id="SelectedValueImport4" class=" gap-24 flex justify-between mt-2">
+                           </div>
+                        </div>
+
+
+
                         
-                    </div>
                     <div class="border-b border-dotted mb-4 mt-4 "></div>
                     <div class="flex justify-between ">
                         <h1>Total Price:</h1>
@@ -327,8 +332,8 @@
                         <button id="nextbtn" class="bg-green-500 hover:bg-green-600 mt-4 text-white font-bold py-2 px-4 
                         rounded-md w-full">
                             Next
-                          </button>
-                          
+                        </button>
+
                     </div>
 
 
@@ -337,7 +342,105 @@
 
             </div>
 
-</section>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Wait for the DOM content to be fully loaded
+
+            // Find the button and section elements
+            const firstBannerBtn = document.getElementById("first-banner-btn");
+            const paribahanSection = document.getElementById("p-h-paribahanSection");
+
+            // Add click event listener to the button
+            firstBannerBtn.addEventListener("click", function () {
+                // Scroll the section into view
+                paribahanSection.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+        });
+
+    </script>
+    <script>
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    // Wait for the DOM content to be fully loaded
+
+    // Variables to track seat counts and total price
+    let remainingSeats = 8;
+    let seatCount = 0;
+    let totalPrice = 0;
+    let clickCount = 0;
+
+    // Find all seat buttons
+    const seatButtons = document.querySelectorAll('#A1, #A2, #A3, #A4, #B1, #B2, #B3, #B4');
+
+    // Function to handle seat button click
+    function handleSeatClick(event) {
+        const seatButton = event.target;
+
+        // Check if the seat is already selected
+        if (seatButton.classList.contains('bg-green-500')) {
+            alert('You have already selected this seat.');
+            return;
+        }
+
+        // Check if all available seats are already selected
+        if (seatCount >= 4) {
+            alert('You can purchase 4 tickets.');
+            return;
+        }
+
+        // Update seat button appearance
+        seatButton.classList.add('bg-green-500');
+        seatButton.classList.remove('bg-gray-100');
+        seatButton.classList.add('text-white');
+
+        // Update remaining seats count
+        remainingSeats--;
+
+        // Update seat count
+        seatCount++;
+        clickCount++;
+
+        // Update Remaining Seats display
+        document.getElementById('RemainingSeats').textContent = remainingSeats;
+
+        // Update seat count display
+        document.getElementById('seatCountIncrage').textContent = seatCount;
+
+        // Create new elements for selected seat details
+        const selectedSeatElement = document.createElement('h1');
+        const seatTypeElement = document.createElement('h1');
+        const seatPriceElement = document.createElement('h1');
+
+        // Set values for the new elements
+        selectedSeatElement.textContent = seatButton.id;
+        seatTypeElement.textContent = 'Economy';
+        seatPriceElement.textContent = '550';
+
+        // Append the new elements to the selected seat section
+        const selectedValueImport = document.getElementById(`SelectedValueImport${Math.ceil(clickCount / 1)}`);
+        selectedValueImport.appendChild(selectedSeatElement);
+        selectedValueImport.appendChild(seatTypeElement);
+        selectedValueImport.appendChild(seatPriceElement);
+
+        // Update total price
+        totalPrice += 550;
+        document.getElementById('totalPriceValue').textContent = totalPrice;
+    }
+
+    // Add click event listeners to all seat buttons
+    seatButtons.forEach(seatButton => {
+        seatButton.addEventListener('click', handleSeatClick);
+    });
+});
+
+
+    </script
+
+    </script>
 
 </body>
+
 </html>
