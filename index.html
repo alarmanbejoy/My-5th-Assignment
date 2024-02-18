@@ -10,7 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <title>P.Ticket</title>
 </head>
 
@@ -139,12 +142,12 @@
 
         <!-- main section first card start -->
 
-        <div class="w-10/12 h-200 mt-16 ml-auto mr-auto ">
+        <div class="w-10/12 h-150 mt-16 ml-auto mr-auto ">
 
 
             <div class="w-500 h-100 bg-white flex rounded-2xl pl-5">
                 <!-- Left Part -->
-                <div class="w-11/12 p items-center ">
+                <div class="w-11/12 p items-center mt-12 ">
 
                     <div class="bg-white p-6 rounded-lg  h-auto w-auto ml-8 mt-8">
                         <div class="flex items-center justify-between">
@@ -153,12 +156,12 @@
                                 <img src="images/bus-logo.png" alt="Mini Logo" class="w-8 h-6 mr-4 mt-4">
 
 
-                                <h1 class="text-xl font-bold mb-2">Greenline Paribahan</h1>
+                                <h1 class="text-2xl font-bold mb-2">Greenline Paribahan</h1>
                             </div>
                             <button
                                 class="bg-green-100 text-green-500 font-semibold px-2 py-2 rounded-md flex items-center">
                                 <img class="h-6 w-6 mr-2" src="images/seat-green.png" alt="Button Icon"
-                                    class="w-4 h-4 mr-2">
+                                    class="w-4 h-4 mr-2 ">
                                 40 Seats left
                             </button>
                         </div>
@@ -167,27 +170,30 @@
                         <div class="bg-gray-50 rounded-xl  mt-4 p-4">
                             <!-- First Row -->
                             <div class="flex justify-between items-center border-b border-dotted pb-2 mt-2">
-                              <!-- Route -->
-                              <p class="text-gray-600 font-semibold">Route</p>
-                              <p class="text-gray-800">Dhaka-Sylhet</p>
+                                <!-- Route -->
+                                <p class="text-gray-600 font-semibold">Route</p>
+                                <p class="text-gray-800">Dhaka-Sylhet</p>
                             </div>
-                            
+
                             <!-- Second Row -->
                             <div class="flex justify-between items-center border-b border-dotted py-2 mt-2">
-                              <!-- Departure Time -->
-                              <p class="text-gray-600 font-semibold">Departure Time</p>
-                              <p class="text-gray-800">9:00 PM</p>
+                                <!-- Departure Time -->
+                                <p class="text-gray-600 font-semibold">Departure Time</p>
+                                <p class="text-gray-800">9:00 PM</p>
                             </div>
-                            
+
                             <!-- Third Row -->
                             <div class="flex justify-between items-center mt-2">
-                              <!-- Buttons -->
-                              <button class="bg-gray-200 text-black font-semibold py-2 px-4 rounded-lg">Dhaka-Khulna</button>
-                              <button class="bg-gray-200 text-black font-semibold py-2 px-4 rounded-lg">Borishal-Pabna</button>
-                              <button class="bg-gray-200 text-black font-semibold py-2 px-4 rounded-lg">Dhake-Kalkata</button>
+                                <!-- Buttons -->
+                                <button
+                                    class="bg-gray-200 text-black font-semibold py-2 px-4 rounded-lg">Dhaka-Khulna</button>
+                                <button
+                                    class="bg-gray-200 text-black font-semibold py-2 px-4 rounded-lg">Borishal-Pabna</button>
+                                <button
+                                    class="bg-gray-200 text-black font-semibold py-2 px-4 rounded-lg">Dhake-Kalkata</button>
                             </div>
-                          </div>
-                          
+                        </div>
+
                     </div>
 
 
@@ -207,7 +213,141 @@
                 </div>
             </div>
         </div>
-        <!-- main section first card send -->
+        <!-- main section first card end -->
+
+
+
+        <!-- main section 2d part select your seat section left side start -->
+        <div class="bg-white p-6 rounded-2xl w-10/12 mx-auto mt-4 flex">
+
+            <div class=" w-1/2 ">
+                <h1 class="text-gray-800 text-xl font-bold mb-4">Select Your Seat</h1>
+                <div class="border-b border-dotted mb-4"></div>
+                <div class="flex justify-between items-center">
+                    <button class=" text-gray-800 px-4 py-2 rounded-md flex items-center">
+                        <img src="images/seat-gray.png" alt="Available Seat" class="w-6 h-6 mr-2">
+                        Available seat
+                    </button>
+                    <button class=" text-green-600 px-4 py-2 rounded-md flex items-center">
+                        <img src="images/seat-green-filled.png" alt="Selected Seat" class="w-6 h-6 mr-2">
+                        Selected seat
+                    </button>
+
+                </div>
+                <div class="border-b border-dotted mb-4 mt-2"></div>
+
+                <!-- seat button section start -->
+
+                <div class="flex space-x-12 justify-end mr-1.5">
+                    <button class="bg-gray-100 w-20 h-12 rounded flex justify-center items-center"> <img
+                            class="h-10 w-10 items-center " src="images/icons8-steering-wheel-48.png" alt=""></button>
+                </div>
+
+                <div class="flex space-x-20 mt-6">
+                    <button class=" w-20 h-12 rounded">A </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">A1 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">A2 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">A3 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">A4 </button>
+                </div>
+
+                <div class="flex space-x-20 mt-6">
+                    <button class=" w-20 h-12 rounded">B</button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">B1 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">B2 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">B3 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">B4 </button>
+                </div>
+
+                <div class="flex space-x-20 mt-6">
+                    <button class=" w-20 h-12 rounded">C </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">C1</button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">C2 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">C3</button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">C4 </button>
+                </div>
+
+                <div class="flex space-x-20 mt-6">
+                    <button class=" w-20 h-12 rounded">D </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">D1</button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">D2 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">D3 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">D4 </button>
+                </div>
+
+                <div class="flex space-x-20 mt-6">
+                    <button class=" w-20 h-12 rounded">E </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">E1 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">E2 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">E3 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">E4 </button>
+                </div>
+
+                <div class="flex space-x-20 mt-6">
+                    <button class=" w-20 h-12 rounded">F </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">F1 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">F2 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">F3 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">F4 </button>
+                </div>
+
+                <div class="flex space-x-20 mt-6">
+                    <button class=" w-20 h-12 rounded">G </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">G1 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">G2 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">G3 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">G4 </button>
+                </div>
+
+                <div class="flex space-x-20 mt-6">
+                    <button class=" w-20 h-12 rounded">H</button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">H1 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">H2</button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">H3 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">H4 </button>
+                </div>
+
+                <div class="flex space-x-20 mt-6">
+                    <button class=" w-20 h-12 rounded">I </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">I1 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">I2 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">I3 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">I4 </button>
+                </div>
+
+                <div class="flex space-x-20 mt-6">
+                    <button class=" w-20 h-12 rounded">J </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">J1 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">J2 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">J3 </button>
+                    <button class="bg-gray-100 w-20 h-12 rounded">J4 </button>
+                </div>
+            </div>
+
+            <div class="h-auto w-0.5 bg-gray-200 ml-8"></div>
+
+          <!-- main clculation part of the site -->
+          <div class="">
+            <div class=" ml-8 ">
+                <h1 class="text-gray-800 text-xl font-bold mb-4">Select Your Seat</h1>
+                <div class="border-b border-dotted mb-4"></div>
+                <div class="flex justify-between items-center">
+    
+          </div>
+    
+
+
+
+
+
+
+        </div>
+
+
+       
+      
+
+
 
 
     </section>
@@ -215,6 +355,14 @@
 
 
 
+
+
+
+
+
 </body>
+
+
+
 
 </html>
