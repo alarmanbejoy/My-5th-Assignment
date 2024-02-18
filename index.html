@@ -22,13 +22,13 @@
 
     <div class="mt-6">
         <!-- Navigation Bar -->
-        <nav>
+     <nav>
             <div class="container mx-auto flex items-center justify-between">
                 <!-- Logo -->
-                <div class="text-2xl font-semibold text-green-600">P-Ticket</div>
+                <div class="text-3xl font-semibold text-green-600">P-Ticket</div>
 
                 <!-- Middle Links -->
-                <div class="hidden md:flex space-x-6">
+                <div class=" flex space-x-6">
                     <a href="#" class="text-gray-600 hover:text-green-600">Home</a>
                     <a href="#" class="text-gray-600 hover:text-green-600">About</a>
                     <a href="#" class="text-gray-600 hover:text-green-600">Destination</a>
@@ -162,7 +162,7 @@
                                 class="bg-green-100 text-green-500 font-semibold px-2 py-2 rounded-md flex items-center">
                                 <img class="h-6 w-6 mr-2" src="images/seat-green.png" alt="Button Icon"
                                     class="w-4 h-4 mr-2 ">
-                                40 Seats left
+                                <h1> <span>8</span> Seats left</h1>
                             </button>
                         </div>
                         <p class="text-sm ml-12  text-gray-600">Coach-009-WEB! AC Business</p>
@@ -185,12 +185,12 @@
                             <!-- Third Row -->
                             <div class="flex justify-between items-center mt-2">
                                 <!-- Buttons -->
+                                <button class="bg-gray-200 text-gray-800 font-semibold py-2 px-4 
+                                    rounded-lg">Dhaka-Khulna</button>
                                 <button
-                                    class="bg-gray-200 text-black font-semibold py-2 px-4 rounded-lg">Dhaka-Khulna</button>
+                                    class="bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg">Borishal-Pabna</button>
                                 <button
-                                    class="bg-gray-200 text-black font-semibold py-2 px-4 rounded-lg">Borishal-Pabna</button>
-                                <button
-                                    class="bg-gray-200 text-black font-semibold py-2 px-4 rounded-lg">Dhake-Kalkata</button>
+                                    class="bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-lg">Dhake-Kalkata</button>
                             </div>
                         </div>
 
@@ -208,7 +208,7 @@
                 <div class="w-3/12 p-4 mt-auto mb-auto text-center">
                     <img class="h-10 mr-auto ml-auto w-10 mb-4" src="images/fare.png" alt="">
                     <h1 class="text-xl font-bold"><span>550</span>Taka</h1>
-                    <p class="text-sm">Per Sent</p>
+                    <p class="text-sm">Per Seat</p>
 
                 </div>
             </div>
@@ -218,10 +218,10 @@
 
 
         <!-- main section 2d part select your seat section left side start -->
-        <div class="bg-white p-6 rounded-2xl w-10/12 mx-auto mt-4 flex">
+        <div class="bg-white p-6 rounded-2xl w-10/12 mx-auto mt-16 flex justify-around">
 
-            <div class=" w-1/2 ">
-                <h1 class="text-gray-800 text-xl font-bold mb-4">Select Your Seat</h1>
+            <div class=" w-1/2  mt-auto mb-auto">
+                <h1 class="text-gray-800 text-2xl font-bold mb-4">Select Your Seat</h1>
                 <div class="border-b border-dotted mb-4"></div>
                 <div class="flex justify-between items-center">
                     <button class=" text-gray-800 px-4 py-2 rounded-md flex items-center">
@@ -234,118 +234,120 @@
                     </button>
 
                 </div>
-                <div class="border-b border-dotted mb-4 mt-2"></div>
+                <div class="border-b border-dotted mb-4 mt-2 "></div>
 
                 <!-- seat button section start -->
 
-                <div class="flex space-x-12 justify-end mr-1.5">
+                <div class="flex space-x-12 justify-end mr-16">
                     <button class="bg-gray-100 w-20 h-12 rounded flex justify-center items-center"> <img
                             class="h-10 w-10 items-center " src="images/icons8-steering-wheel-48.png" alt=""></button>
                 </div>
 
                 <div class="flex space-x-20 mt-6">
                     <button class=" w-20 h-12 rounded">A </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">A1 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">A2 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">A3 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">A4 </button>
+                    <button id="A1" class="bg-gray-100 w-20 h-12 rounded">A1 </button>
+                    <button id="A2" class="bg-gray-100 w-20 h-12 rounded">A2 </button>
+                    <button id="A3" class="bg-gray-100 w-20 h-12 rounded">A3 </button>
+                    <button id="A4" class="bg-gray-100 w-20 h-12 rounded">A4 </button>
                 </div>
 
-                <div class="flex space-x-20 mt-6">
-                    <button class=" w-20 h-12 rounded">B</button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">B1 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">B2 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">B3 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">B4 </button>
+                <div class="flex space-x-20 mt-6 mb-4">
+                    <button  class=" w-20 h-12 rounded">B</button>
+                    <button id="B1" class="bg-gray-100 w-20 h-12 rounded">B1 </button>
+                    <button id="B2" class="bg-gray-100 w-20 h-12 rounded">B2 </button>
+                    <button id="B3" class="bg-gray-100 w-20 h-12 rounded">B3 </button>
+                    <button id="B4" class="bg-gray-100 w-20 h-12 rounded">B4 </button>
                 </div>
 
-                <div class="flex space-x-20 mt-6">
-                    <button class=" w-20 h-12 rounded">C </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">C1</button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">C2 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">C3</button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">C4 </button>
-                </div>
 
-                <div class="flex space-x-20 mt-6">
-                    <button class=" w-20 h-12 rounded">D </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">D1</button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">D2 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">D3 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">D4 </button>
-                </div>
-
-                <div class="flex space-x-20 mt-6">
-                    <button class=" w-20 h-12 rounded">E </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">E1 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">E2 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">E3 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">E4 </button>
-                </div>
-
-                <div class="flex space-x-20 mt-6">
-                    <button class=" w-20 h-12 rounded">F </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">F1 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">F2 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">F3 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">F4 </button>
-                </div>
-
-                <div class="flex space-x-20 mt-6">
-                    <button class=" w-20 h-12 rounded">G </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">G1 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">G2 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">G3 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">G4 </button>
-                </div>
-
-                <div class="flex space-x-20 mt-6">
-                    <button class=" w-20 h-12 rounded">H</button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">H1 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">H2</button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">H3 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">H4 </button>
-                </div>
-
-                <div class="flex space-x-20 mt-6">
-                    <button class=" w-20 h-12 rounded">I </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">I1 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">I2 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">I3 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">I4 </button>
-                </div>
-
-                <div class="flex space-x-20 mt-6">
-                    <button class=" w-20 h-12 rounded">J </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">J1 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">J2 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">J3 </button>
-                    <button class="bg-gray-100 w-20 h-12 rounded">J4 </button>
-                </div>
             </div>
 
             <div class="h-auto w-0.5 bg-gray-200 ml-8"></div>
 
-          <!-- main clculation part of the site -->
-          <div class="">
-            <div class=" ml-8 ">
-                <h1 class="text-gray-800 text-xl font-bold mb-4">Select Your Seat</h1>
-                <div class="border-b border-dotted mb-4"></div>
-                <div class="flex justify-between items-center">
-    
-          </div>
-    
+            <!-- main clculation part of the site -->
+
+
+            <div class="  ml-8">
+
+                <div class=" ">
+                    <h1 class="text-gray-800 text-2xl font-bold mb-4">Select Your Seat</h1>
+                    <div class="border-b border-dotted mb-4 "></div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex  justify-between ">
+                        <h1 class="text-xl font-semibold ">Seat <span id="seatCount"
+                                class="bg-green-500 text-white px-2 rounded-full">0</span></h1>
+                        <h1 class="text-xl font-semibold ">Class</h1>
+                        <h1 class="text-xl font-semibold ">Fare</h1>
+                       </div>
+                       <div class="border-b border-dotted mt-4 "></div>
+                    <!-- For selected seat -->
+                    <div id="SelectedValueImport1" class=" gap-24 flex justify-between mt-2">
+                        <h1> A1 </h1>
+                        <h1>economy</h1>
+                        <h1>456</h1>
+                    </div>
+                    <div id="SelectedValueImport2" class=" gap-24 flex justify-between mt-2">
+                        <h1> A1 </h1>
+                        <h1>economy</h1>
+                        <h1>456</h1>
+                    </div>
+                    <div id="SelectedValueImport3" class=" gap-24 flex justify-between mt-2">
+                        <h1> A1 </h1>
+                        <h1>economy</h1>
+                        <h1>456</h1>
+                    </div>
+                    <div id="SelectedValueImport4" class=" gap-24 flex justify-between mt-2">
+                        <h1> A1 </h1>
+                        <h1>economy</h1>
+                        <h1>456</h1>
+                    </div>
+                    <div class="border-b border-dotted mb-4 mt-4 "></div>
+                    <div class="flex justify-between gap-24">
+                        <h1>Total Price:</h1>
+                        <h1>0</h1>
+                    </div>
+                    <div class="max-w-md mx-auto mt-4">
+                        <div class="relative">
+                            <input type="text" placeholder="Input Coupon Code"
+                                class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:border-green-500">
+                            <button
+                                class="absolute right-0 top-0 bg-green-500 text-white px-4 py-2 rounded-md">Apply</button>
+                        </div>
+                    </div>
 
 
 
 
+                    <div class="border-b border-dotted mb-4 mt-4 "></div>
+                    <div class="flex justify-between gap-24">
+                        <h1>Discount Price:</h1>
+                        <h1>0</h1>
+                    </div>
+
+                    <div class="border-b border-dotted mb-4 mt-4 "></div>
+                    <div class="flex justify-between gap-24">
+                        <h1>Grand Total</h1>
+                        <h1>0</h1>
+                    </div>
+                    <div>
+                        <button class="bg-green-500 hover:bg-green-600 mt-4 text-white font-bold py-2 px-4 
+                        rounded-md w-full">
+                            Next
+                          </button>
+                          
+                    </div>
 
 
-        </div>
+                </div>
 
 
-       
-      
+            </div>
+
+
+
+
 
 
 
